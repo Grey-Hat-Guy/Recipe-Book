@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+body {
+    background-color: #DCDCDC;
+}
+
+.title {
+    text-align: center;
+    font-family: 'Space Mono', monospace;
+    text-transform: uppercase;
+}
+
+.recipe-form {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: auto;
+}
+
+.recipe-form input,
+.recipe-form textarea {
+    width: 390px;
+    padding: 8px;
+    font-size: 1em;
+    font-family: 'Space Mono', monospace;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    transition: border-color 0.3s ease;
+}
+
+.recipe-form input:focus,
+.recipe-form textarea:focus {
+    border-color: #373837;
+}
+
+.recipe-form input {
+    position: relative;
+    left: 30px;
+}
+
+.recipe-form textarea {
+    height: 100px;
+}
+
+.recipe-form .fields {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.recipe-form label {
+    font-family: 'Space Mono', monospace;
+    font-size: 1.1em;
+    margin-right: 50px;
+}
+
+.recipe-form .btn {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.recipe-form button {
+    background-color: #B0B0B0;
+    color: #333;
+    padding: 10px 15px;
+    font-size: 1.3em;
+    font-family: 'Dancing Script', cursive;
+    text-transform: uppercase;
+    font-weight: 600;
+    width: 30%;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.recipe-form button:hover {
+    background-color: #A0A0A0;
+}

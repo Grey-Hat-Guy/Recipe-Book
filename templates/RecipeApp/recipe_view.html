@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Recipe View</title>
+    <link href="{% static 'css/style2.css' %}" rel="stylesheet">
+</head>
+
+<body>
+<div class="container">
+    <div class="title">
+        <h3>Recipe</h3>
+    </div>
+    <div class="head">
+        <h1>{{recipe.title}}</h1>
+    </div>
+
+    <div class="ingredients">
+    <h2 class="ing-head">Ingredients</h2>
+    <ol class="ing-list">
+        {% for ingredient_line in recipe.ingredients.splitlines %}
+            {% if ingredient_line %}
+                <li>{{ ingredient_line }}</li>
+            {% endif %}
+        {% endfor %}
+    </ol>
+</div>
+
+<div class="instructions">
+    <h2 class="ins-head">Instructions</h2>
+    <ol class="ins-list">
+        {% for instruction_line in recipe.instructions.splitlines %}
+            {% if instruction_line %}
+                <li>{{ instruction_line }}</li>
+            {% endif %}
+        {% endfor %}
+    </ol>
+</div>
+
+</div>
+</body>
+
+</html>

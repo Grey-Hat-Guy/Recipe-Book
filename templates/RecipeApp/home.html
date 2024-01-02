@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Recipe Book</title>
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/bad6dae16b.js"></script>
+</head>
+
+<body>
+<div id="container">
+    <div id="logo">
+        <img alt="Logo" src="{% static 'images/logo.png' %}">
+    </div>
+    <div id="banner"></div>
+    <div id="btn_div">
+        <a class="btn-grad" href="{% url 'add_recipe' %}">Add Recipe<i class="fa-solid fa-plus" id="add-icon"></i></a>
+    </div>
+    <div class="recipe-container">
+        <div class="recipe-head">
+            <h1 class="title1">Savor the Flavours</h1>
+        </div>
+        <div class="recipe-outer">
+            {% for recipe in recipes %}
+            {% if recipe.title %}
+            <div class="recipes">
+                <a class="recipe-view" href="{% url 'view_recipe' recipe_id=recipe.id %}" target="_blank">
+                    <h2 class="recipe-title">{{ recipe.title }}</h2>
+                </a>
+                <p>{{ recipe.description }}</p>
+                <div class="recipe-btn">
+                    <a class="btn-rec" href="{% url 'update_recipe' recipe.id %}" target="_blank">Update <i class="fa-solid fa-pen update-icon"></i></a>
+                    <a class="btn-rec" href="{% url 'delete_recipe' recipe.id %}">Delete <i class="fa-solid fa-trash delete-icon"></i></a>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+
+
+
+    </div>
+</div>
+</body>
+
+</html>

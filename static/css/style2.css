@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&family=Space+Mono&display=swap');
+/* font-family: 'Noto Sans', sans-serif;
+    font-family: 'Space Mono', monospace;
+*/
+
+body {
+    background-color: #dcdcdc;
+}
+
+.title {
+    text-align: center;
+    font-family: 'Space Mono', monospace;
+    text-transform: uppercase;
+}
+
+.title h3 {
+    color: #a9977d;
+    font-size: 1.3em;
+    position: relative;
+    max-width: 320px;
+    margin: auto;
+}
+
+.title h3:before {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 3px;
+    background: #a9977d;
+    left: 0;
+    top: 50%;
+    position: absolute;
+}
+
+.title h3::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 3px;
+    background: #a9977d;
+    right: 0;
+    top: 50%;
+    position: absolute;
+}
+
+.head {
+    text-align: center;
+    font-family: 'Space Mono', monospace;
+    text-transform: uppercase;
+}
+
+.ingredients {
+    display: grid;
+    justify-content: center;
+    height: 400px;
+    width: 500px;
+    margin: auto;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #828080;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.ing-head {
+    font-family: 'Space Mono', monospace;
+    border: 2px solid #333333;
+    text-align: center;
+    color: #333333;
+    background-color: whitesmoke;
+    border-radius: 8px;
+    position: sticky;
+    top: 0;
+}
+
+.ingredients .ing-list {
+    list-style-type: none;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1.1em;
+}
+
+.ingredients .ing-list li {
+    padding: 4px;
+    border-bottom: 2px solid #a9977d;
+    margin-bottom: 3px;
+}
+
+.instructions {
+    display: grid;
+    justify-content: center;
+    width: 500px;
+    margin: auto;
+}
+
+.instructions .ins-head {
+    margin-top: 50px;
+    font-family: 'Space Mono', monospace;
+    border: 2px solid #333333;
+    text-align: center;
+    color: #333333;
+    background-color: whitesmoke;
+    border-radius: 8px;
+}
+
+.instructions .ins-list {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.instructions .ins-list li {
+    padding: 5px;
+    text-align: justify;
+}
